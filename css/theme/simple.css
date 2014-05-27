@@ -128,7 +128,7 @@ body {
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color:  #72C23B; }
+  border-top-color:  #f05b62; }
 
 .reveal .controls div.navigate-left.enabled:hover {
   border-right-color: #53555C; }
@@ -166,7 +166,7 @@ body {
     z-index: 10; 
     font-size: 35%;
     text-align:left;
-    background-image: url(http://utilities.simpleenergy.com/wp-content/themes/simpleenergy/images/logo.png);
+    background-image: url(../images/pink-logo.png);
     background-repeat: no-repeat;
     background-size: auto 74%;
     background-position: 7px 0;
