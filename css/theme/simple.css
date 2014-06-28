@@ -48,6 +48,12 @@ body {
   background: rgba(0, 0, 0, 0.99);
   text-shadow: none; }
 
+.blue {color:#00A9B4;}
+.green {color: #92BB44;}
+.orange {color: #EDAB23;}
+.left {float: left;}
+.right {float: right;}
+
 /*********************************************
  * HEADERS
  *********************************************/
