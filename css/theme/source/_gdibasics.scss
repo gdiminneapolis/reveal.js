@@ -1,0 +1,74 @@
+/* Some basic stuff to include in all the GDI themes */
+
+.reveal {
+  footer {
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    bottom: 3px;
+    left: 0;
+    z-index: 10;
+    font-size: 35%;
+    text-align:right;
+    background-image: url($footerImage);
+    // ../images/pink-logo.png
+    // http://gdimpls.s3.amazonaws.com/reveal.js/css/images/pink-logo.png
+    // reveal.js/css/images/pink-logo.png
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+
+    .copyright {
+      margin:15px 5px 0 100px;
+      a {
+	img {
+	  vertical-align: middle;
+	}
+      }
+    }
+  }
+
+  .left-align {
+    text-align: left;
+  }
+
+  .right-align {
+    text-align: right;
+  }
+
+  .left, .pull-left {
+    float: left;
+  }
+
+  .right, .pull-right {
+    float: right;
+  }
+
+  .two-col {
+    width: 100%;
+
+    .left-col, .right-col {
+      width: 47%;
+    }
+
+    .left-col {
+      float: left;
+    }
+
+    .right-col {
+      float: right
+    }
+
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+  .blue   { color: #01A9B4; }
+  .green  { color: #92BB44; }
+  .yellow { color: #EDAB23; }
+  .pink   { color: #F05B62; }
+  .red    { color: #8B0036; }
+
+}
