@@ -1,5 +1,11 @@
 /* Some basic stuff to include in all the GDI themes */
 
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #222;
+	}
+}
+
 .reveal {
   footer {
     position: fixed;
@@ -11,9 +17,6 @@
     font-size: 35%;
     text-align:right;
     background-image: url($footerImage);
-    // ../images/pink-logo.png
-    // http://gdimpls.s3.amazonaws.com/reveal.js/css/images/pink-logo.png
-    // reveal.js/css/images/pink-logo.png
     background-repeat: no-repeat;
     background-size: auto 100%;
 
@@ -65,10 +68,10 @@
     }
   }
 
-  .blue   { color: #01A9B4; }
-  .green  { color: #92BB44; }
-  .yellow { color: #EDAB23; }
-  .pink   { color: #F05B62; }
-  .red    { color: #8B0036; }
+  .blue   { color: $blue; }
+  .green  { color: $green; }
+  .yellow { color: $yellow; }
+  .pink   { color: $pink; }
+  .red    { color: $red; }
 
 }

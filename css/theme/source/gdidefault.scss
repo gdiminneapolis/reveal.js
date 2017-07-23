@@ -1,8 +1,9 @@
 /**
  * GDI Default theme for reveal.js.
  * Vaguely reproduced by tamouse@gmail.com
+ *
+ * Black gradient background, white text, pink headings
  */
-
 
 // Default mixins and settings -----------------
 @import "../template/mixins";
@@ -16,50 +17,15 @@ $yellow: #EDAB23;
 $pink:   #F05B62;
 $red:    #8B0036;
 
-// Include theme-specific fonts
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Montserrat:400,700|Source+Code+Pro:400,700');
-
-
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: #2b2b2b;
-@mixin bodyBackground() {
-  background: #1c1e20;
-  background: -moz-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #555a5f), color-stop(100%, #1c1e20));
-  background: -webkit-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background: -o-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background: -ms-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background: radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-}
 
 $mainColor: #fff;
 $headingColor: $pink;
 
-$mainFontSize: 38px;
-$mainFont: 'Lato', Helvetica, Arial, sans-serif;
-$headingFont: 'Montserrat', Impact, sans-serif;
-$headingTextShadow: none;
-$headingLetterSpacing: normal;
-$headingTextTransform: none;
-$headingFontWeight: 700;
-$linkColor: $blue;
-$linkColorHover: lighten( $linkColor, 15% );
-$selectionBackgroundColor: lighten( $linkColor, 25% );
+// GDI Generic Settings
 
-
-$heading1Size: 2.5em;
-$heading2Size: 1.6em;
-$heading3Size: 1.3em;
-$heading4Size: 1.0em;
-
-$footerImage: "//gdimpls.s3.amazonaws.com/reveal.js/css/images/pink-logo.png";
-
-section.has-light-background {
-	&, h1, h2, h3, h4, h5, h6 {
-		color: #222;
-	}
-}
-
+@import "gdi_settings";
 
 // Theme template ------------------------------
 @import "../template/theme";
