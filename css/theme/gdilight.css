@@ -1,8 +1,8 @@
 /**
- * GDI Default theme for reveal.js.
+ * GDI "Light" theme for reveal.js.
  * Vaguely reproduced by tamouse@gmail.com
  *
- * Black gradient background, white text, pink headings
+ * Pale background, darker text
  */
 /* Setting used across all GDI tempates, load before loading the reveal template  */
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Montserrat:400,700|Source+Code+Pro:400,700");
@@ -10,20 +10,20 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #2b2b2b;
-  background: -moz-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #555a5f), color-stop(100%, #1c1e20));
-  background: -webkit-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background: -o-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background: -ms-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background: radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background-color: #2b2b2b; }
+  background: #fff;
+  background: -moz-radial-gradient(center, circle cover, #f2f2f2 0%, #fff 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f2f2f2), color-stop(100%, #fff));
+  background: -webkit-radial-gradient(center, circle cover, #f2f2f2 0%, #fff 100%);
+  background: -o-radial-gradient(center, circle cover, #f2f2f2 0%, #fff 100%);
+  background: -ms-radial-gradient(center, circle cover, #f2f2f2 0%, #fff 100%);
+  background: radial-gradient(center, circle cover, #f2f2f2 0%, #fff 100%);
+  background-color: #fff; }
 
 .reveal {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 38px;
   font-weight: normal;
-  color: #fff; }
+  color: #333; }
 
 ::selection {
   color: #fff;
@@ -50,7 +50,7 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #F05B62;
+  color: #666;
   font-family: "Montserrat", Impact, sans-serif;
   font-weight: 700;
   line-height: 1.2;
@@ -236,7 +236,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #fff;
+  border: 4px solid #333;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal section img.plain {
