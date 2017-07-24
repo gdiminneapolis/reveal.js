@@ -6,72 +6,88 @@ section.has-light-background {
 	}
 }
 
-.reveal {
-  footer {
-    position: fixed;
-    height: 40px;
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+@mixin banner {
     width: 100%;
-    bottom: 3px;
+    text-align: center;
+    color: $bannerColor;
+    background: $bannerBackground;
+    height: $bannerHeight;
+    padding: 0 20px;
+    position: absolute;
     left: 0;
-    z-index: 10;
-    font-size: 35%;
-    text-align:right;
-    background-image: url($footerImage);
-    background-repeat: no-repeat;
-    background-size: auto 100%;
+    font-size: 0.6em;
+    @include flex-row;
+}
 
-    .copyright {
-      margin:15px 5px 0 100px;
-      a {
-	img {
-	  vertical-align: middle;
-	}
-      }
-    }
-  }
 
-  .left-align {
-    text-align: left;
-  }
-
-  .right-align {
-    text-align: right;
-  }
-
-  .left, .pull-left {
-    float: left;
-  }
-
-  .right, .pull-right {
-    float: right;
-  }
-
-  .two-col {
-    width: 100%;
-
-    .left-col, .right-col {
-      width: 47%;
+.reveal {
+    .slide-header {
+        @include banner;
+        top: 0;
     }
 
-    .left-col {
-      float: left;
+    .slide-footer {
+        @include banner;
+        bottom: 0;
+
+        .left, right {
+            @include flex-row;
+            img {
+                max-height: $bannerHeight;
+            }
+        }
+        .left {
+            justify-content: left;
+        }
+        .right {
+            justify-content: right;
+            margin-right: 200px;
+        }
+    }
+    .left-align {
+        text-align: left;
     }
 
-    .right-col {
-      float: right
+    .right-align {
+        text-align: right;
     }
 
-    &:after {
-      content: '';
-      display: table;
-      clear: both;
+    .left, .pull-left {
+        float: left;
     }
-  }
 
-  .blue   { color: $blue; }
-  .green  { color: $green; }
-  .yellow { color: $yellow; }
-  .pink   { color: $pink; }
-  .red    { color: $red; }
+    .right, .pull-right {
+        float: right;
+    }
 
+    .two-up {
+        @include flex-row;
+        width: 100%;
+        .left, .right {
+            flex: 1;
+        }
+    }
+
+    .blue   { color: $blue; }
+    .green  { color: $green; }
+    .yellow { color: $yellow; }
+    .pink   { color: $pink; }
+    .red    { color: $red; }
+    .twitter-icon { color: $blue; fill: $blue }
+
+    .slide-number {
+        bottom: inherit;
+        top: 8px;
+    }
+
+    .controls {
+        background: $controlsBackground;
+    }
 }

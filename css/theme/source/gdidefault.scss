@@ -10,19 +10,6 @@
 @import "../template/settings";
 // ---------------------------------------------
 
-
-$blue:   #01A9B4;
-$green:  #92BB44;
-$yellow: #EDAB23;
-$pink:   #F05B62;
-$red:    #8B0036;
-
-// Override theme settings (see ../template/settings.scss)
-$backgroundColor: #2b2b2b;
-
-$mainColor: #fff;
-$headingColor: $pink;
-
 @mixin bodyBackground($outerColor: #555a5f, $innerColor: #1c1e20) {
   background: $backgroundColor;
   background: -moz-radial-gradient(center, circle cover, $outerColor 0%, $innerColor 100%);
@@ -33,9 +20,12 @@ $headingColor: $pink;
   background: radial-gradient(center, circle cover, $outerColor 0%, $innerColor 100%);
 }
 
+$headingColor: #ec054c; // DeepPink
+@mixin headingShadow {
+    text-shadow: 2px 2px 2px lighten($headingColor, 25%);
+}
 
 // GDI Generic Settings
-
 @import "gdi_settings";
 
 // Theme template ------------------------------
@@ -44,3 +34,9 @@ $headingColor: $pink;
 
 // GDI Stuff -----------------------------------
 @import "gdibasics";
+
+.reveal {
+    h1,h2,h3,h4,h5,h6{
+        @include headingShadow;
+    }
+}
